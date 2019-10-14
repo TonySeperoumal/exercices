@@ -4,4 +4,4 @@ exercices d'alyra
 
  a rendre vendredi
 
- pour 17h
+ pour 17h30
