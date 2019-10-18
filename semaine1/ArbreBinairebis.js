@@ -2,11 +2,9 @@ class Noeud {
   constructor(valeur) {
     this.valeur = valeur
     this.gauche = undefined
-<<<<<<< HEAD
-    this.droit = undefined
-=======
     this.droite = undefined
->>>>>>> d3124383d4ce20eadb2a564af351f6da2a038715
+    this.compteur_gauche = 0
+    this.compteur_droite = 0
   }
 
   ajouter(valeur) {
@@ -14,22 +12,15 @@ class Noeud {
       this.gauche = new Noeud(valeur)
     else if (this.droite == undefined)
       this.droite = new Noeud(valeur)
-<<<<<<< HEAD
-    else 
-      this.gauche.ajouter(valeur)
-  }
-
-  afficherSousArbre() {
-    let sousArbre = this.valeur.toString()
-    if(this.gauche)
-      sousArbre += '('+ this.gauche.afficherSousArbre() +')'
-    if(this.droite)
-      sousArbre += '('+ this.droite.afficherSousArbre() +')'
-    return  sousArbre
-  }
-=======
-    else
-      this.gauche.ajouter(valeur)
+    else {
+      if (this.compteur_gauche <= this.compteur_droite) {
+        this.gauche.ajouter(valeur)
+        this.compteur_gauche += 1
+      } else {
+        this.droite.ajouter(valeur)
+        this.compteur_droite += 1
+      }
+    }
   }
 
   ajouterGauche(valeur) {
@@ -82,7 +73,6 @@ class Noeud {
 
   }
 
->>>>>>> d3124383d4ce20eadb2a564af351f6da2a038715
 }
 
 class Arbre {
@@ -91,19 +81,6 @@ class Arbre {
   }
 
   ajouterNoeud(valeur) {
-<<<<<<< HEAD
-    if (this.racine !== undefined) 
-      this.racine.ajouter(valeur)
-    else 
-      this.racine = new Noeud(valeur)
-  }
-
-  afficherArbre(){
-    return this.racine.afficherSousArbre()
-  }
-}
-
-=======
     if (this.racine !== undefined)
       this.racine.ajouter(valeur)
     else
@@ -122,16 +99,10 @@ class Arbre {
 
 
 
->>>>>>> d3124383d4ce20eadb2a564af351f6da2a038715
 babobab = new Arbre()
 babobab.ajouterNoeud(6)
 babobab.ajouterNoeud(3)
 babobab.ajouterNoeud(7)
-<<<<<<< HEAD
-console.log("Baobab:", babobab)
-console.log("Affichage prefix:", babobab.afficherArbre())
-
-=======
 babobab.ajouterNoeud(13)
 babobab.ajouterNoeud(74)
 babobab.ajouterNoeud(54)
@@ -145,4 +116,3 @@ let result = babobab.racine.parcoursinfixe()
 console.log("Baobab:", babobab)
 console.log("Affichage prefix:", babobab.afficherArbre())
 console.log(result)
->>>>>>> d3124383d4ce20eadb2a564af351f6da2a038715

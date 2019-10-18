@@ -5,11 +5,11 @@ function chiffrer(chaine){
     let nc = "";
         for (let i = 0; i < chaine.length; i++ ) {
          
-            console.log(chaine.charCodeAt(i));
+            console.log(chaine.charCodeAt(i))
 
-            code = chaine[i].charCodeAt();
+            code = chaine[i].charCodeAt()
             if(code >= 65 && code <= 90){
-                nc += String.fromCharCode(code + 5);
+                nc += String.fromCharCode(code + 5)
             }
         }
     return nc
