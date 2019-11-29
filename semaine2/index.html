@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="defi1.js"></script>
+    <title>Page simple</title>
+  </head>
+  <body>
+    <h3>Conversion hexadecimal</h3>
+    <input type="text" name="decimale" value=""><br>
+    <span type="text" name="hexadecimale"></span><br>
+    <button id="convertir">Convertir</button>
+
+    <div class="">
+      <script>
+      $.getJSON( "https://ecole.alyra.fr/pluginfile.php/397/mod_assign/intro/block.json", function( data ) {
+
+        $.each( data, function( key, val ) {
+          console.log(key + " : " + val);
+        });
+
+      });
+      </script>
+
+    </div>
+  </body>
+</html>
