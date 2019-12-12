@@ -5,7 +5,7 @@ import "./erc721.sol";
 import "./safemath.sol";
 
 /// TODO : A remplacez avec par des descriptions natspec
-contract PlaneOwnership is ZombieAttack, ERC721 {
+contract PlaneOwnership is Fight, ERC721 {
 
   using SafeMath for uint256;
 
